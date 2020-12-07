@@ -1,0 +1,63 @@
+1) Difference between HTTP1.1 vs HTTP2
+	The main difference between HTTP1.1 and HTTP2 are as below
+	-> It is binary, instead of textual protocal
+	-> It is fully multiplexed comapred to Ordered and Blocking
+	-> Server pushing is allowed in HTTP 2 which makes page loading faster and add responses 
+	->to the browser caches
+	-> HTTP2 is atleast 14% faster than the HTTP1.1 requests.
+
+2) http version history
+
+HTTP stands for Hyper Text Transfer Protocol, It is a protocol created by 
+Tim Berners - Lee, to help commnication between servers and clients, this protocol forms 
+the root of world wide web or the internet as we call it.
+
+->Versions of Http:
+  HTTP 0.9: It was the first version released by the Tim Berners-Lee, with just Simple GET
+  request to a specific address, which returned a simple HTML response.
+
+
+->HTTP 1.0: With the development in HTML specifications and Web Browser's capability to handle 
+ different file types like Plain Text, images, XML HTML, this version was recogonized in
+ 1996.
+
+->HTTP 1.1: This version was recognized in 1997, and it was the internet standard for a long time
+  till HTTP2.0 came up. This version included various performance improvements like caching 
+  mechanisms, request pipelining, transfer encodings, byte range requests, keepalive connections.
+
+->HTTP 2.0:Released in 2015 by IETF, has many enhancement over HTTP1.1, main difference between 
+  HTTP1.1 and HTTP 2 are answered in the first question
+
+->HTTP3.0: Released in 2019, it si Quick UDP Internet Connection protocol, as it is implemented on 
+  UDP, connection establishment times are much faster, improved forward error correction
+
+
+3.List 5 difference between Browser JS(console) vs Nodejs
+	1] -> Javascript can run on any JS engine like Spider Monkey, Chakra, V8
+	   -> NodeJS can run only on the V8 engine
+	2] -> Javascript running on the browser used mainly to make page dynamic on the client side
+		  without giving access to the underying OS on which the browser runs.
+	   -> NodeJS has and can access the resources on the operating system to perform any
+           non-blocking operations.	  
+    3] -> Browser JS is a programming language whereas NodeJS is an interpreter/runtime environment
+          for running JS
+    4] -> Browser JS is used for rendering pages on the client side, where as NodeJS can be used for 
+         hosting servers and responding to the client/browsers requests	
+	5] -> JS can access the DOM and modify it, whereas NodeJS can not access the DOM or HTML tags
+	
+ 
+
+4) what happens when you type a URL in the address bar in the browser?
+
+	i) Enter a URL into a web browser
+	ii) The browser looks up the IP address for the domain name via DNS
+	     (Usually Website address are stored in browser cache or System DNS cache)
+	iii) The browser sends a HTTP request to the server
+	     (This can be HTTP or HTTPS based on the request URL) 
+	iv) The server sends back a HTTP response
+		 (If the request is valid and client is authorized) 
+	v) The browser renders the HTML and parses document of further resourses	      
+	vi) The browser sends requests for additional objects embedded in HTML (images, css, JavaScript) and repeats steps 3-5.
+	    With HTTP2 server pushing, HTML and CSS can be loaded in the first request itself making the page rendering faster.
+
+	vii) Once the page is loaded, the browser sends further async requests as needed.
